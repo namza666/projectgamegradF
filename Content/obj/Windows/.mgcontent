@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/a.png</File>
+    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/ball.png</File>
+    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/bg.jpg</File>
+    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/bg2.png</File>
+    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/c.png</File>
+    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/Char01.png</File>
+    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/charector.png</File>
+    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/e.png</File>
+    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/g.png</File>
+    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/h.png</File>
+    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/lazer.png</File>
+    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/bg3.jpg</File>
+    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/bg4.jpg</File>
+    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/item.png</File>
+    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/HealthBar_thumb.png</File>
+    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/File.spritefont</File>
+    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/font.spritefont</File>
+    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/player.png</File>
+  </SourceFiles>
+</SourceFileCollection>

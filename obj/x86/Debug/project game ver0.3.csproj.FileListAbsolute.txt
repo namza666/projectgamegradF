@@ -1,0 +1,124 @@
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\a.xnb
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\ball.xnb
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\bg.xnb
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\bg2.xnb
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\bg3.xnb
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\c.xnb
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\Char01.xnb
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\charector.xnb
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\e.xnb
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\g.xnb
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\h.xnb
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\lazer.xnb
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\project game ver0.3.exe
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\project game ver0.3.pdb
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\MonoGame.Framework.dll
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.dll
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.XInput.dll
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\MonoGame.Framework.xml
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.xml
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.XInput.xml
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\obj\x86\Debug\project game ver0.3.exe
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\obj\x86\Debug\project game ver0.3.pdb
+c:\users\windows 10\documents\visual studio 2017\Projects\project game ver0.3\project game ver0.3\obj\x86\Debug\project game ver0.3.csprojResolveAssemblyReference.cache
+C:\Users\Windows 10\Documents\Visual Studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\bg4.xnb
+C:\Users\Windows 10\Documents\Visual Studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\item.xnb
+C:\Users\Windows 10\Documents\Visual Studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\project game ver0.3.exe.manifest
+C:\Users\Windows 10\Documents\Visual Studio 2017\Projects\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\project game ver0.3.application
+C:\Users\Windows 10\Documents\Visual Studio 2017\Projects\project game ver0.3\project game ver0.3\obj\x86\Debug\project game ver0.3.exe.manifest
+C:\Users\Windows 10\Documents\Visual Studio 2017\Projects\project game ver0.3\project game ver0.3\obj\x86\Debug\project game ver0.3.application
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\a.xnb
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\ball.xnb
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\bg.xnb
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\bg2.xnb
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\bg3.xnb
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\bg4.xnb
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\c.xnb
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\Char01.xnb
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\charector.xnb
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\e.xnb
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\g.xnb
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\h.xnb
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\item.xnb
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\lazer.xnb
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\project game ver0.3.exe.manifest
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\project game ver0.3.application
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\project game ver0.3.exe
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\project game ver0.3.pdb
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\obj\x86\Debug\project game ver0.3.csprojResolveAssemblyReference.cache
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\obj\x86\Debug\project game ver0.3.exe.manifest
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\obj\x86\Debug\project game ver0.3.application
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\obj\x86\Debug\project game ver0.3.exe
+C:\Users\CAMT\Desktop\New folder (4)\project game ver0.3\project game ver0.3\obj\x86\Debug\project game ver0.3.pdb
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\a.xnb
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\ball.xnb
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\bg.xnb
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\bg2.xnb
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\bg3.xnb
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\bg4.xnb
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\c.xnb
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\Char01.xnb
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\charector.xnb
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\e.xnb
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\g.xnb
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\h.xnb
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\item.xnb
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\lazer.xnb
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\project game ver0.3.exe.manifest
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\project game ver0.3.application
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\project game ver0.3.exe
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\project game ver0.3.pdb
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\obj\x86\Debug\project game ver0.3.csprojResolveAssemblyReference.cache
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\obj\x86\Debug\project game ver0.3.exe.manifest
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\obj\x86\Debug\project game ver0.3.application
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\obj\x86\Debug\project game ver0.3.exe
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\obj\x86\Debug\project game ver0.3.pdb
+C:\Users\Windows 10\Desktop\New folder (19)\New folder (4)\project game ver0.3\project game ver0.3\bin\Windows\x86\Debug\Content\HealthBar_thumb.xnb

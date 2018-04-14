@@ -15,6 +15,9 @@ namespace project_game_ver0._3
 
         List<Vector2> monsterpos = new List<Vector2>();
         List<Rectangle> playerpos = new List<Rectangle>();
+        List<Vector2> lazerpos = new List<Vector2>();
+
+
 
         Vector2 poslazer = new Vector2(100, 100);
         public Texture2D lazer0;
@@ -34,7 +37,7 @@ namespace project_game_ver0._3
         bool jumpplayer = false;
         int count;
 
-        public lazer(int f)
+        public lazer(Vector2 posplayer)
         {
 
             // playerX = new projectgame.AnimatedTexture(Vector2.Zero, Rotation, Scale, Depth);
@@ -65,18 +68,24 @@ namespace project_game_ver0._3
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Begin();
+            
             //playerX.DrawFrame(spriteBatch, posplayer, direction);
-            spriteBatch.Draw(lazer0, poslazer, Color.White);
+            for(int i = 0; i < lazerpos.Count; i++)
+            {
+                spriteBatch.Draw(lazer0, lazerpos[i], Color.White);
+                
+            }
+
+                spriteBatch.DrawString(font, "count : " + lazerpos, new Vector2(200, 315), Color.Black);
 
 
-            spriteBatch.End();
 
         }
 
         public void shoot(Vector2 posplayer)
         {
-            poslazer = posplayer;
+            lazerpos.Add(posplayer);
+            
         }
 
     }

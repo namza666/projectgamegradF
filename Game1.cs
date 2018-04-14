@@ -41,6 +41,7 @@ namespace project_game_ver0._3
         bool death;
         bool dropitem = false;
         bool checkcol;
+        bool b;
 
 
         bool count = false;
@@ -284,6 +285,9 @@ namespace project_game_ver0._3
 
             
             hp.Draw(spriteBatch);
+
+            //lazer0.Draw(spriteBatch);
+
             monster.Draw(spriteBatch);
             spriteBatch.Draw(ball, posball, Color.White);
 
@@ -322,6 +326,8 @@ namespace project_game_ver0._3
             
             spriteBatch.DrawString(font, "score : " + score, new Vector2(200, 230), Color.Black);
             spriteBatch.DrawString(font, "count : " + counts, new Vector2(200, 245), Color.Black);
+            spriteBatch.DrawString(font, "check : " + b, new Vector2(200, 330), Color.Black);
+
 
             spriteBatch.End();
             base.Draw(gameTime);
@@ -335,13 +341,15 @@ namespace project_game_ver0._3
             item.positem(old_posmon);
         }
 
-        public void fire(bool a)
+        /*public void fire(bool a)
         {
             if (a == true)
             {
                 lazer0.Draw(spriteBatch);
+                b = a;
             }
-        }
+
+        }*/
         
 
 

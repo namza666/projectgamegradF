@@ -15,6 +15,9 @@ namespace project_game_ver0._3
         
         int direction = 1;
         projectgame.AnimatedTexture playerX;
+
+        List<lazer> lazerlist = new List<lazer>();
+
         Vector2 posplayer = new Vector2(100, 100);
         Game1 game;
         SpriteFont font;
@@ -33,8 +36,8 @@ namespace project_game_ver0._3
         public player(Game1 game, string asset)
         {
             playerX = new projectgame.AnimatedTexture(Vector2.Zero, Rotation, Scale, Depth);
-            lazer = new lazer(1);
-            
+            //lazer = new lazer(1);
+           
             this.game = game;
         }
         public void Load(ContentManager content, string asset)
@@ -85,6 +88,7 @@ namespace project_game_ver0._3
             spriteBatch.DrawString(font, "g : " + gravity, new Vector2(200, 275), Color.Black);
             spriteBatch.DrawString(font, "foce : " + foce, new Vector2(200, 300), Color.Black);
             spriteBatch.DrawString(font, "count : " + count, new Vector2(200, 315), Color.Black);
+            
 
             //spriteBatch.End();
 
@@ -95,8 +99,10 @@ namespace project_game_ver0._3
             KeyboardState ks = Keyboard.GetState();
             if (ks.IsKeyDown(Keys.Space))
             {
-                lazer.shoot(posplayer);
-                game.fire(true);
+                lazer lazer1 = new lazer(posplayer);
+                //lazer.shoot(posplayer);
+                lazerlist.Add(lazer1);
+
             }
             if (ks.IsKeyDown(Keys.D))
             {

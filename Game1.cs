@@ -73,8 +73,8 @@ namespace project_game_ver0._3
         {
             item = new Item(1, 0.5f);
             hp = new Hp(0.5f, 1);
-            lazer0 = new lazer(1);
-            monster = new spawnmonster(this);
+            //lazer0 = new lazer(1);
+            monster = new spawnmonster(1);
             playerX = new player(this, "Char01");
             graphics = new GraphicsDeviceManager(this);
             player = new projectgame.AnimatedTexture(Vector2.Zero, 0, 1.0f, 0.5f);
@@ -115,7 +115,7 @@ namespace project_game_ver0._3
             bg = Content.Load<Texture2D>("bg4");
             ball = Content.Load<Texture2D>("ball");
 
-            lazer0.Load(Content);
+            //lazer0.Load(Content);
             item.Load(Content);
             hp.Load(Content);
             monster.Load(Content);

@@ -16,7 +16,7 @@ namespace project_game_ver0._3
         int direction = 1;
         projectgame.AnimatedTexture playerX;
 
-        List<lazer> lazerlist = new List<lazer>();
+        //List<lazer> lazerlist = new List<lazer>();
 
         Vector2 posplayer = new Vector2(100, 100);
         Game1 game;
@@ -29,32 +29,34 @@ namespace project_game_ver0._3
         float gravity=3.0f;
         float foce=0;
         bool jumpplayer = false;
+        bool shoot = false;
         int count;
 
+        spawnmonster monster;
         lazer lazer;
 
         public player(Game1 game, string asset)
         {
             playerX = new projectgame.AnimatedTexture(Vector2.Zero, Rotation, Scale, Depth);
-            //lazer = new lazer(1);
-           
+            lazer = new lazer(posplayer);
+            monster = new spawnmonster(1);
             this.game = game;
         }
         public void Load(ContentManager content, string asset)
         {
             playerX.Load(content, asset, 12, 3, 10);
             font = content.Load<SpriteFont>("font");
-
+            lazer.Load(content);
 
         }
 
         public void Update(float elapsed)
         {
             playerX.UpdateFrame(elapsed);
-
+            
 
             Rectangle playercol = new Rectangle((int)posplayer.X, (int)posplayer.Y, 85, 125);
-
+        
             posplayer.Y += gravity;
             if(posplayer.Y> 380)
             {
@@ -77,6 +79,7 @@ namespace project_game_ver0._3
                     count = 0;
                 }
             }
+            lazer.Update(elapsed);
             
         }
         public void Draw(SpriteBatch spriteBatch)
@@ -88,11 +91,19 @@ namespace project_game_ver0._3
             spriteBatch.DrawString(font, "g : " + gravity, new Vector2(200, 275), Color.Black);
             spriteBatch.DrawString(font, "foce : " + foce, new Vector2(200, 300), Color.Black);
             spriteBatch.DrawString(font, "count : " + count, new Vector2(200, 315), Color.Black);
+            if(shoot == true)
+            {
+                lazer.Draw(spriteBatch);
+            }
             
-
             //spriteBatch.End();
 
         }
+        public void hitmonster(Rectangle posmonster)
+        {
+
+        }
+
 
         public void move(int move,float move1)
         {
@@ -100,8 +111,9 @@ namespace project_game_ver0._3
             if (ks.IsKeyDown(Keys.Space))
             {
                 lazer lazer1 = new lazer(posplayer);
-                //lazer.shoot(posplayer);
-                lazerlist.Add(lazer1);
+                lazer.shoot(posplayer);
+                shoot = true;
+                //lazerlist.Add(lazer1);
 
             }
             if (ks.IsKeyDown(Keys.D))

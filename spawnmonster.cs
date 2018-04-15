@@ -13,10 +13,10 @@ namespace project_game_ver0._3
     class spawnmonster
     {
 
-        List<Vector2> monsterpos = new List<Vector2>();
-        List<Rectangle> playerpos = new List<Rectangle>();
+        //List<Vector2> monsterpos = new List<Vector2>();
+        //List<Rectangle> playerpos = new List<Rectangle>();
 
-        Vector2 posmonster = new Vector2(800, 400);
+        Vector2 posmonster;
         public Texture2D monster;
 
         int direction = 1;
@@ -32,15 +32,17 @@ namespace project_game_ver0._3
         float gravity = 3.0f;
         float foce = 0;
         bool jumpplayer = false;
+        bool hit=false;
         int count;
-
-        public spawnmonster(Game1 game)
+        lazer lazer;
+        player player;
+        public spawnmonster(int i)
         {
 
-           // playerX = new projectgame.AnimatedTexture(Vector2.Zero, Rotation, Scale, Depth);
+            // playerX = new projectgame.AnimatedTexture(Vector2.Zero, Rotation, Scale, Depth);
 
-
-            this.game = game;
+            lazer = new lazer(new Vector2(0,0));
+            //this.game = game;
         }
         public void Load(ContentManager content)
         {
@@ -53,6 +55,9 @@ namespace project_game_ver0._3
         public void Update(float elapsed)
         {
 
+
+            //Rectangle moncol = new Rectangle((int)posmonster.X, (int)posmonster.Y, 85, 125);
+            //lazer.getcol(moncol);
             posmonster.X -= 3;
             if (posmonster.X<0)
             {
@@ -61,17 +66,23 @@ namespace project_game_ver0._3
             // playerX.UpdateFrame(elapsed);
 
 
-           // Rectangle playercol = new Rectangle((int)posplayer.X, (int)posplayer.Y, 85, 125);
-
+            // Rectangle playercol = new Rectangle((int)posplayer.X, (int)posplayer.Y, 85, 125);
+            lazer.Update(elapsed);
             
 
         }
+        public void gethit(bool get)
+        {
+            //hit = get;
+        }
+
         public void Draw(SpriteBatch spriteBatch)
         {
             //spriteBatch.Begin();
             //playerX.DrawFrame(spriteBatch, posplayer, direction);
-            spriteBatch.Draw(monster, posmonster, Color.White);
-
+           
+                spriteBatch.Draw(monster, posmonster, Color.White);
+            
 
             //spriteBatch.End();
 

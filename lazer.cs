@@ -13,18 +13,18 @@ namespace project_game_ver0._3
     class lazer
     {
 
-        List<Vector2> monsterpos = new List<Vector2>();
-        List<Rectangle> playerpos = new List<Rectangle>();
-        List<Vector2> lazerpos = new List<Vector2>();
+        //List<Vector2> monsterpos = new List<Vector2>();
+        //List<Rectangle> playerpos = new List<Rectangle>();
+        //List<Vector2> lazerpos = new List<Vector2>();
 
 
 
-        Vector2 poslazer = new Vector2(100, 100);
+        Vector2 poslazer;
         public Texture2D lazer0;
 
         int direction = 1;
         projectgame.AnimatedTexture playerX;
-
+        Rectangle moncol;
         Game1 game;
         SpriteFont font;
         GraphicsDeviceManager graphics;
@@ -36,13 +36,14 @@ namespace project_game_ver0._3
         float foce = 0;
         bool jumpplayer = false;
         int count;
-
+        spawnmonster monster;
+        Hp hp;
         public lazer(Vector2 posplayer)
         {
 
             // playerX = new projectgame.AnimatedTexture(Vector2.Zero, Rotation, Scale, Depth);
-
-
+            monster = new spawnmonster(1);
+            hp = new Hp(0.1f,1);
             this.game = game;
         }
         public void Load(ContentManager content)
@@ -56,35 +57,52 @@ namespace project_game_ver0._3
         public void Update(float elapsed)
         {
 
-           
+            poslazer.X += 5;
             // playerX.UpdateFrame(elapsed);
-
+            //Rectangle lazerrcol = new Rectangle((int)poslazer.X, (int)poslazer.Y, 30, 30);
 
             // Rectangle playercol = new Rectangle((int)posplayer.X, (int)posplayer.Y, 85, 125);
 
+            /*if (lazerrcol.Intersects(moncol) == true)
+            {
+               // monster.gethit(true);
+               
 
 
+            }*/
+           
+            //hp.Update(elapsed);
+
+        }
+
+        public void getcol(Rectangle col)
+        {
+            //moncol = col;
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            
+
             //playerX.DrawFrame(spriteBatch, posplayer, direction);
-            for(int i = 0; i < lazerpos.Count; i++)
+            /*for(int i = 0; i < lazerpos.Count; i++)
             {
                 spriteBatch.Draw(lazer0, lazerpos[i], Color.White);
                 
-            }
+            }*/
 
-                spriteBatch.DrawString(font, "count : " + lazerpos, new Vector2(200, 315), Color.Black);
+            spriteBatch.Draw(lazer0, poslazer, Color.White);
 
 
+
+        }
+        public void hitmonster()
+        {
 
         }
 
         public void shoot(Vector2 posplayer)
         {
-            lazerpos.Add(posplayer);
+            poslazer = posplayer;
             
         }
 

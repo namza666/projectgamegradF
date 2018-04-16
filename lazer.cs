@@ -42,7 +42,7 @@ namespace project_game_ver0._3
         {
 
             // playerX = new projectgame.AnimatedTexture(Vector2.Zero, Rotation, Scale, Depth);
-            monster = new spawnmonster(1);
+            //monster = new spawnmonster(1);
             hp = new Hp(0.1f,1);
             this.game = game;
         }

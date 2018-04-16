@@ -16,13 +16,13 @@ namespace project_game_ver0._3
         //List<Vector2> monsterpos = new List<Vector2>();
         //List<Rectangle> playerpos = new List<Rectangle>();
 
-        Vector2 posmonster;
+        Vector2 posmonster = new Vector2(800, 0);
         public Texture2D monster;
 
         int direction = 1;
         projectgame.AnimatedTexture playerX;
         
-        Game1 game;
+        
         SpriteFont font;
         GraphicsDeviceManager graphics;
         KeyboardState old_ks;
@@ -61,7 +61,7 @@ namespace project_game_ver0._3
             posmonster.X -= 3;
             if (posmonster.X<0)
             {
-                posmonster.X = 800;
+                posmonster.X = 0;
             }
             // playerX.UpdateFrame(elapsed);
 
@@ -81,8 +81,11 @@ namespace project_game_ver0._3
             //spriteBatch.Begin();
             //playerX.DrawFrame(spriteBatch, posplayer, direction);
            
-                spriteBatch.Draw(monster, posmonster, Color.White);
-            
+            //spriteBatch.Draw(monster, posmonster, Color.White);
+
+            //spriteBatch.Draw(monster, posmonster, new Rectangle(170, 0, 170, 210), Color.White, 0, Vector2.Zero, new Vector2(1, 1), 0, 0);
+            //spriteBatch.Draw(monster, posmonster, new Rectangle(100,100, 30, 30), Color.White);
+            spriteBatch.Draw(monster, posmonster, Color.White);
 
             //spriteBatch.End();
 

@@ -17,8 +17,13 @@ namespace project_game_ver0._3
         projectgame.AnimatedTexture playerX;
 
         //List<lazer> lazerlist = new List<lazer>();
+        SpriteBatch spriteBatch;
 
-        Vector2 posplayer = new Vector2(100, 100);
+        Vector2 bgpos = new Vector2(0, 0);
+        Vector2 cameraPos = Vector2.Zero;
+        Vector2 scroll_factor = new Vector2(1.0f, 1);
+
+        Vector2 posplayer = new Vector2(350, 100);
         Game1 game;
         SpriteFont font;
         GraphicsDeviceManager graphics;
@@ -31,9 +36,11 @@ namespace project_game_ver0._3
         bool jumpplayer = false;
         bool shoot = false;
         int count;
-
+        public Vector2 speed;
         spawnmonster monster;
         lazer lazer;
+        camera camera;
+        background bg;
 
         public player(Game1 game, string asset)
         {
@@ -41,22 +48,26 @@ namespace project_game_ver0._3
             lazer = new lazer(posplayer);
             monster = new spawnmonster(1);
             this.game = game;
+            bg = new background(game);
+            
+
         }
         public void Load(ContentManager content, string asset)
         {
             playerX.Load(content, asset, 12, 3, 10);
             font = content.Load<SpriteFont>("font");
             lazer.Load(content);
-
+            bg.Load(content);
+            monster.Load(content);
         }
 
         public void Update(float elapsed)
         {
             playerX.UpdateFrame(elapsed);
-            
+            posplayer.X += 1;
 
             Rectangle playercol = new Rectangle((int)posplayer.X, (int)posplayer.Y, 85, 125);
-        
+            bg.getposplayer(posplayer);
             posplayer.Y += gravity;
             if(posplayer.Y> 380)
             {
@@ -79,19 +90,26 @@ namespace project_game_ver0._3
                     count = 0;
                 }
             }
+
+            monster.Update(elapsed);
             lazer.Update(elapsed);
+            bg.Update(elapsed);
             
         }
         public void Draw(SpriteBatch spriteBatch)
         {
             //spriteBatch.Begin();
-            playerX.DrawFrame(spriteBatch, posplayer, direction);
 
+            bg.Draw(spriteBatch);
+            playerX.DrawFrame(spriteBatch, posplayer, direction);
+            monster.Draw(spriteBatch);
+           
             spriteBatch.DrawString(font, "jump : " + jumpplayer, new Vector2(200, 260), Color.Black);
             spriteBatch.DrawString(font, "g : " + gravity, new Vector2(200, 275), Color.Black);
             spriteBatch.DrawString(font, "foce : " + foce, new Vector2(200, 300), Color.Black);
             spriteBatch.DrawString(font, "count : " + count, new Vector2(200, 315), Color.Black);
-            if(shoot == true)
+
+            if (shoot == true)
             {
                 lazer.Draw(spriteBatch);
             }
@@ -99,9 +117,9 @@ namespace project_game_ver0._3
             //spriteBatch.End();
 
         }
-        public void hitmonster(Rectangle posmonster)
+        public void getposplayer(Vector2 getposplayer)
         {
-
+            
         }
 
 

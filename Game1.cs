@@ -47,7 +47,7 @@ namespace project_game_ver0._3
         bool count = false;
         int counts = 0;
 
-        Texture2D bg;
+        //Texture2D bg;
         Texture2D lazer;
 
         Texture2D itemingame;
@@ -66,7 +66,7 @@ namespace project_game_ver0._3
         player playerX;
         spawnmonster monster;
         lazer lazer0;
-
+        background bg;
 
 
         public Game1()
@@ -79,6 +79,7 @@ namespace project_game_ver0._3
             graphics = new GraphicsDeviceManager(this);
             player = new projectgame.AnimatedTexture(Vector2.Zero, 0, 1.0f, 0.5f);
             Content.RootDirectory = "Content";
+            
             //itemingame = item.item2;
         }
 
@@ -97,7 +98,7 @@ namespace project_game_ver0._3
             speedball = new Vector2(5, 5);
 
             cameraPos = new Vector2(3, 0);
-
+            
             base.Initialize();
         }
 
@@ -112,8 +113,9 @@ namespace project_game_ver0._3
             font = Content.Load<SpriteFont>("font");
             spriteBatch = new SpriteBatch(GraphicsDevice);
             player.Load(Content, "player", 12, 3, 20);
-            bg = Content.Load<Texture2D>("bg4");
+            //bg = Content.Load<Texture2D>("bg4");
             ball = Content.Load<Texture2D>("ball");
+            
 
             //lazer0.Load(Content);
             item.Load(Content);
@@ -145,7 +147,7 @@ namespace project_game_ver0._3
                 Exit();
             //ProcessInput();
             float elapsed = (float)gameTime.ElapsedGameTime.TotalSeconds;
-
+            
 
             Rectangle playercol = new Rectangle((int)posplayer.X, (int)posplayer.Y, 85, 125);
 
@@ -270,7 +272,7 @@ namespace project_game_ver0._3
             System.Console.WriteLine("bg Pos (x,y ) " + posplayer);
             
 
-            if (posplayer.X < 520)
+            /*if (posplayer.X < 520)
             {
                 spriteBatch.Draw(bg, (bgpos - cameraPos) * scroll_factor, Color.White);
             }
@@ -281,14 +283,14 @@ namespace project_game_ver0._3
             {
                 spriteBatch.Draw(bg, (bgpos - cameraPos) * scroll_factor + new Vector2(graphics.GraphicsDevice.Viewport.Width, 0) * 2, Color.White);
 
-            }
+            }*/
 
             
             hp.Draw(spriteBatch);
 
             //lazer0.Draw(spriteBatch);
 
-            monster.Draw(spriteBatch);
+           
             spriteBatch.Draw(ball, posball, Color.White);
 
 

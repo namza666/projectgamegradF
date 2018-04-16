@@ -72,6 +72,9 @@
   <PropertyGroup />
   <ItemGroup>
     <Compile Include="AnimatedTexture.cs" />
+    <Compile Include="background.cs" />
+    <Compile Include="bullet.cs" />
+    <Compile Include="camera.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Hp.cs" />
     <Compile Include="item.cs" />

@@ -19,7 +19,7 @@ namespace project_game_ver0._3
 
 
 
-        Vector2 poslazer;
+        public Vector2 poslazer;
         public Texture2D lazer0;
 
         int direction = 1;
@@ -38,12 +38,15 @@ namespace project_game_ver0._3
         int count;
         spawnmonster monster;
         Hp hp;
-        public lazer(Vector2 posplayer)
+        player player;
+        public Rectangle lasercol;
+        //lazer is bullet of player
+        public lazer(Game1 game)
         {
-
-            // playerX = new projectgame.AnimatedTexture(Vector2.Zero, Rotation, Scale, Depth);
-            //monster = new spawnmonster(1);
+            
+            
             hp = new Hp(0.1f,1);
+            //lasercol = new Rectangle((int)poslazer.X, (int)poslazer.Y, lazer0.Width, lazer0.Height);
             this.game = game;
         }
         public void Load(ContentManager content)
@@ -56,8 +59,14 @@ namespace project_game_ver0._3
 
         public void Update(float elapsed)
         {
+            if (poslazer.X < 800)
+            {
+                poslazer.X += 5;
+            }
+            
 
-            poslazer.X += 5;
+          
+
             // playerX.UpdateFrame(elapsed);
             //Rectangle lazerrcol = new Rectangle((int)poslazer.X, (int)poslazer.Y, 30, 30);
 
@@ -70,7 +79,7 @@ namespace project_game_ver0._3
 
 
             }*/
-           
+
             //hp.Update(elapsed);
 
         }

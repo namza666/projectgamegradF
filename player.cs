@@ -35,21 +35,30 @@ namespace project_game_ver0._3
         float foce=0;
         bool jumpplayer = false;
         bool shoot = false;
+        bool check=false;
+        bool checktime=false;
         int count;
         public Vector2 speed;
         spawnmonster monster;
         lazer lazer;
         camera camera;
         background bg;
+        Hp hp;
+        public int counttime;
+        public Rectangle playercol;
+        public Rectangle lasorcol;
 
         public player(Game1 game, string asset)
         {
             playerX = new projectgame.AnimatedTexture(Vector2.Zero, Rotation, Scale, Depth);
-            lazer = new lazer(posplayer);
-            monster = new spawnmonster(1);
+            lazer = new lazer(game);
+            monster = new spawnmonster(game);
             this.game = game;
             bg = new background(game);
-            
+            hp = new Hp(0.5f,1);
+            playercol = new Rectangle((int)posplayer.X, (int)posplayer.Y, 85, 125);
+            lasorcol = new Rectangle((int)lazer.poslazer.X, (int)lazer.poslazer.Y, 30, 30);
+
 
         }
         public void Load(ContentManager content, string asset)
@@ -59,6 +68,7 @@ namespace project_game_ver0._3
             lazer.Load(content);
             bg.Load(content);
             monster.Load(content);
+            hp.Load(content);
         }
 
         public void Update(float elapsed)
@@ -66,7 +76,31 @@ namespace project_game_ver0._3
             playerX.UpdateFrame(elapsed);
             posplayer.X += 1;
 
-            Rectangle playercol = new Rectangle((int)posplayer.X, (int)posplayer.Y, 85, 125);
+            
+            playercol = new Rectangle((int)posplayer.X, (int)posplayer.Y, 85, 125);
+            lasorcol = new Rectangle((int)lazer.poslazer.X, (int)lazer.poslazer.Y, 30, 30);
+            if (playercol.Intersects(monster.moncol) == true)
+            {
+               
+                hp.DecreaseHp(playercol.Intersects(monster.moncol));
+                check = true;
+                
+
+            }
+            if (lasorcol.Intersects(monster.moncol) == true)
+            {
+
+
+                checktime = true;
+                monster.gethit(true);
+
+            }
+            
+
+            if(checktime == true)
+            {
+                checktimetospawnmonster();
+            }
             bg.getposplayer(posplayer);
             posplayer.Y += gravity;
             if(posplayer.Y> 380)
@@ -90,11 +124,11 @@ namespace project_game_ver0._3
                     count = 0;
                 }
             }
-
+            
             monster.Update(elapsed);
             lazer.Update(elapsed);
             bg.Update(elapsed);
-            
+            hp.Update(elapsed);
         }
         public void Draw(SpriteBatch spriteBatch)
         {
@@ -103,32 +137,56 @@ namespace project_game_ver0._3
             bg.Draw(spriteBatch);
             playerX.DrawFrame(spriteBatch, posplayer, direction);
             monster.Draw(spriteBatch);
-           
+            hp.Draw(spriteBatch);
             spriteBatch.DrawString(font, "jump : " + jumpplayer, new Vector2(200, 260), Color.Black);
             spriteBatch.DrawString(font, "g : " + gravity, new Vector2(200, 275), Color.Black);
             spriteBatch.DrawString(font, "foce : " + foce, new Vector2(200, 300), Color.Black);
             spriteBatch.DrawString(font, "count : " + count, new Vector2(200, 315), Color.Black);
+            spriteBatch.DrawString(font, "lazer : " + lazer.poslazer, new Vector2(400, 260), Color.Black);
+            spriteBatch.DrawString(font, "check : " + check, new Vector2(400, 275), Color.Black);
+            spriteBatch.DrawString(font, "moncol : " + monster.moncol, new Vector2(400, 290), Color.Black);
+            spriteBatch.DrawString(font, "playercol : " + playercol, new Vector2(400, 305), Color.Black);
+            spriteBatch.DrawString(font, "checktime : " + counttime, new Vector2(400, 320), Color.Black);
+            spriteBatch.DrawString(font, "hit monster : " + monster.hit, new Vector2(400, 335), Color.Black);
+
+
 
             if (shoot == true)
             {
                 lazer.Draw(spriteBatch);
+                if (lazer.poslazer.X >= 800)
+                {
+                    shoot = false;
+                }
             }
             
             //spriteBatch.End();
 
         }
-        public void getposplayer(Vector2 getposplayer)
+        public void getposmon(Vector2 getposplayer)
         {
             
         }
 
+        public void checktimetospawnmonster()
+        {
+            counttime++;
+            if(counttime == 300)
+            {
+                monster.posmonster.X = 800;
+                monster.hit = false;
+                counttime = 0;
+            }
+
+        }
 
         public void move(int move,float move1)
         {
             KeyboardState ks = Keyboard.GetState();
-            if (ks.IsKeyDown(Keys.Space))
-            {
-                lazer lazer1 = new lazer(posplayer);
+            if (ks.IsKeyDown(Keys.Space)&&shoot==false)
+            {   
+
+                lazer lazer1 = new lazer(game);
                 lazer.shoot(posplayer);
                 shoot = true;
                 //lazerlist.Add(lazer1);
@@ -138,7 +196,7 @@ namespace project_game_ver0._3
             {
                 
                 playerX.Play();
-                posplayer.X += 3;
+                posplayer.X += 1;
 
                 
                 direction = 3;

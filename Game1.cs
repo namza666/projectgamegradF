@@ -74,7 +74,7 @@ namespace project_game_ver0._3
             item = new Item(1, 0.5f);
             hp = new Hp(0.5f, 1);
             //lazer0 = new lazer(1);
-            monster = new spawnmonster(1);
+            monster = new spawnmonster(this);
             playerX = new player(this, "Char01");
             graphics = new GraphicsDeviceManager(this);
             player = new projectgame.AnimatedTexture(Vector2.Zero, 0, 1.0f, 0.5f);
@@ -208,20 +208,7 @@ namespace project_game_ver0._3
 
             //posmonster.X -= 3;
 
-            if (posmonster.X < -100)
-            {
-                posmonster.X = 800;
-            }
-
-            if (jumpplayer == false)
-            {
-                posplayer.Y += gravity;
-            }
-            if (posplayer.Y > 320)
-            {
-                posplayer.Y = 320;
-
-            }
+            
             if (jumpplayer == true)
             {
                 gravity--;
@@ -286,7 +273,7 @@ namespace project_game_ver0._3
             }*/
 
             
-            hp.Draw(spriteBatch);
+            //hp.Draw(spriteBatch);
 
             //lazer0.Draw(spriteBatch);
 
@@ -297,31 +284,21 @@ namespace project_game_ver0._3
 
 
 
-            if (hit == false)
-            {
-                //spriteBatch.Draw(ball, posmonster, Color.White);
-
-            }
-            if (dropitem == true)
-            {
-
-                item.Draw(spriteBatch);
-
-            }
+            
 
 
             //player.DrawFrame(spriteBatch, posplayer, direction);
 
             playerX.Draw(spriteBatch);
 
-            if (shootpos == true)
+            /*if (shootpos == true)
             {
                 //poslazer = posplayer;
                 poslazer = posplayer + offset;
 
                 shootpos = false;
 
-            }
+            }*/
 
             
             spriteBatch.DrawString(font, "Col : " + checkcol, new Vector2(200, 200), Color.Black);

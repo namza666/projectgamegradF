@@ -13,7 +13,7 @@ namespace project_game_ver0._3
     class bullet
     {
 
-        
+        // bullet for monster
         public bullet(Vector2 posplayer)
         {
             

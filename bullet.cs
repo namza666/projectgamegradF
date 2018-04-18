@@ -12,45 +12,44 @@ namespace project_game_ver0._3
 {
     class bullet
     {
-
+        
+        
+        Texture2D laser;
+        public Vector2 posbullet;
         // bullet for monster
-        public bullet(Vector2 posplayer)
+        public bullet(Game game)
         {
-            
+           
         }
         public void Load(ContentManager content)
         {
-           
+
+            laser = content.Load<Texture2D>("laser");
 
         }
+        public void reload(Vector2 posmonster)
+        {
 
+            posbullet = posmonster;
+
+        }
         public void Update(float elapsed)
         {
-
-           
+            posbullet.Y += 1;
+            
 
         }
 
-        public void getcol(Rectangle col)
-        {
-          
-        }
-
+        
         public void Draw(SpriteBatch spriteBatch)
         {
 
-            
+            //spriteBatch.Draw(laser, posbullet, Color.White);
 
 
 
         }
-       
 
-        public void shoot(Vector2 posplayer)
-        {
-            
-
-        }
-
+        
     }
 }

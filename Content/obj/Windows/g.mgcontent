@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/g.png</SourceFile>
+  <SourceFile>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/g.png</SourceFile>
   <SourceTime>2018-03-15T21:31:15.4855529+07:00</SourceTime>
-  <DestFile>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/bin/Windows/g.xnb</DestFile>
-  <DestTime>2018-04-14T14:06:33.5877353+07:00</DestTime>
+  <DestFile>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/bin/Windows/g.xnb</DestFile>
+  <DestTime>2018-04-17T22:33:19.0718398+07:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T22:05:36+07:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

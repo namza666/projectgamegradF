@@ -14,7 +14,8 @@ namespace project_game_ver0._3
     {
         GraphicsDeviceManager graphics;
         SpriteFont font;
-        
+
+        Texture2D tree;
         Texture2D bg;
 
         Vector2 bgpos = new Vector2(0, 0);
@@ -38,6 +39,8 @@ namespace project_game_ver0._3
 
             font = content.Load<SpriteFont>("font");
             bg = content.Load<Texture2D>("bg4");
+            tree = content.Load<Texture2D>("tree2");
+
             // Create a new SpriteBatch, which can be used to draw textures.
 
             // item = Content.Load<Texture2D>("item");
@@ -79,13 +82,20 @@ namespace project_game_ver0._3
              }*/
             
             spriteBatch.Draw(bg, (bgpos- cameraPos), Color.White);
+
             
-            spriteBatch.Draw(bg, (bgpos - cameraPos) + new Vector2(1400, 0), Color.White);
-            spriteBatch.Draw(bg, (bgpos - cameraPos) + new Vector2(2800, 0), Color.White);
-            spriteBatch.Draw(bg, (bgpos - cameraPos) + new Vector2(4200, 0),Color.White);
-            spriteBatch.Draw(bg, (bgpos - cameraPos) + new Vector2(5600, 0), Color.White);
+            for(int i =0;i < 10; i++)
+            {
+                spriteBatch.Draw(bg, (bgpos - cameraPos) + new Vector2(1400+(1400*i), 0), Color.White);
+                
+            }
 
+          
 
+            for (int i = 0; i < 25; i++)
+            {
+                spriteBatch.Draw(tree, (bgpos - cameraPos) * 0.5f + new Vector2(100 + (500 * i), 250), Color.White);
+            }
             /*if (posplayer.X > 400)
             {
                 spriteBatch.Draw(bg, (bgpos - cameraPos) , Color.White);

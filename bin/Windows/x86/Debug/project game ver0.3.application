@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="project game ver0.3.exe.manifest" size="17338">
+    <dependentAssembly dependencyType="install" codebase="project game ver0.3.exe.manifest" size="21696">
       <assemblyIdentity name="project game ver0.3.exe" version="1.0.0.8" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="amd64" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xZ1TN+86p4hQqHG2aBR9NpwhnNyqS+U3FZh21fEbpl8=</dsig:DigestValue>
+        <dsig:DigestValue>NKKm91g43+6RfIELvr23YN4ZyddKgyqHsY4mOvWJGmM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

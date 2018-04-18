@@ -1,6 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
+using System.Collections.Generic;
+using Microsoft.Xna.Framework.Media;
 
 namespace project_game_ver0._3
 {
@@ -11,16 +14,18 @@ namespace project_game_ver0._3
     {
         GraphicsDeviceManager graphics;
 
+        List<enemy> enemies = new List<enemy>();
+
+        Random random = new Random();
         SpriteBatch spriteBatch;
         SpriteFont font;
-
+        Song song;
         Vector2 posplayer;
         Vector2 posball;
         Vector2 speedball;
-        Vector2 poslazer;
+        
         Vector2 posmonster = new Vector2(800, 400);
-        Vector2 itempos;
-        Vector2 old_posmon;
+       
 
         Vector2 offset = new Vector2(0, 60);
         Vector2 bgpos = new Vector2(0, 0);
@@ -28,23 +33,18 @@ namespace project_game_ver0._3
         Vector2 scroll_factor = new Vector2(1.0f, 1);
 
 
+        bool keyActiveUp = false;
+        bool keyActiveDown = false;
 
         KeyboardState old_ks;
         int direction = 1;
         int score = 0;
+        Texture2D manu;
+        Texture2D UII01;
 
-        bool jumpplayer = false;
-        bool shoot;
-        bool shootpos = false;
-        bool hit = false;
-        bool positemcheck;
-        bool death;
-        bool dropitem = false;
-        bool checkcol;
-        bool b;
+        int manu01 = 0;
 
 
-        bool count = false;
         int counts = 0;
 
         //Texture2D bg;
@@ -55,7 +55,7 @@ namespace project_game_ver0._3
 
         int gravity = 20;
 
-
+        int currentMenu = 1;
 
         Texture2D ball;
 
@@ -64,7 +64,8 @@ namespace project_game_ver0._3
         Item item;
         Hp hp;
         player playerX;
-        spawnmonster monster;
+        coin coins;
+        
         lazer lazer0;
         background bg;
 
@@ -74,8 +75,9 @@ namespace project_game_ver0._3
             item = new Item(1, 0.5f);
             hp = new Hp(0.5f, 1);
             //lazer0 = new lazer(1);
-            monster = new spawnmonster(this);
+           
             playerX = new player(this, "Char01");
+            coins = new coin(this,new Vector2(0,0));
             graphics = new GraphicsDeviceManager(this);
             player = new projectgame.AnimatedTexture(Vector2.Zero, 0, 1.0f, 0.5f);
             Content.RootDirectory = "Content";
@@ -108,22 +110,25 @@ namespace project_game_ver0._3
         /// </summary>
         protected override void LoadContent()
         {
-
+            manu = Content.Load<Texture2D>("TDK");
+            UII01 = Content.Load<Texture2D>("UI01");
             // Create a new SpriteBatch, which can be used to draw textures.
             font = Content.Load<SpriteFont>("font");
             spriteBatch = new SpriteBatch(GraphicsDevice);
             player.Load(Content, "player", 12, 3, 20);
             //bg = Content.Load<Texture2D>("bg4");
             ball = Content.Load<Texture2D>("ball");
-            
 
+            this.song = Content.Load<Song>("sound");
             //lazer0.Load(Content);
             item.Load(Content);
             hp.Load(Content);
-            monster.Load(Content);
-            playerX.Load(Content, "player");
             
-
+            playerX.Load(Content, "player");
+            coins.Load(Content, "coin");
+            MediaPlayer.Play(song);
+            MediaPlayer.Volume = 0.1f;
+            MediaPlayer.MediaStateChanged += MediaPlayer_MediaStateChanged;
             // TODO: use this.Content to load your game content here
         }
 
@@ -131,6 +136,17 @@ namespace project_game_ver0._3
         /// UnloadContent will be called once per game and is the place to unload
         /// game-specific content.
         /// </summary>
+        /// 
+
+
+        void MediaPlayer_MediaStateChanged(object sender, System.EventArgs e)
+        {  
+            // 0.0f is silent, 1.0f is full volume  
+
+            MediaPlayer.Volume = 0.5f;
+            MediaPlayer.Play(song);
+        }
+
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
@@ -141,112 +157,93 @@ namespace project_game_ver0._3
         /// checking for collisions, gathering input, and playing audio.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        float spawn = 0;
+
+        internal List<enemy> Enemies { get => enemies; set => enemies = value; }
+
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
             //ProcessInput();
             float elapsed = (float)gameTime.ElapsedGameTime.TotalSeconds;
-            
+            //LoadEnemies();
+            spawn += (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            foreach (enemy enemy in enemies)
+                enemy.Update(graphics.GraphicsDevice);
 
             Rectangle playercol = new Rectangle((int)posplayer.X, (int)posplayer.Y, 85, 125);
+            KeyboardState keyboard = Keyboard.GetState();
 
-            Rectangle lazercol = new Rectangle((int)poslazer.X, (int)poslazer.Y, 30, 30);
-
-            Rectangle moncol = new Rectangle((int)posmonster.X, (int)posmonster.Y, 80, 80);
             playerX.move(1, 0.1f);
             item.colitem(playercol);
-
-            if (count == true)
+            if (manu01 == 0)
             {
-                counts++;
-                if (counts > 120)
+                if (keyboard.IsKeyDown(Keys.Up))
                 {
-                    counts = 0;
-                    posmonster.X = 800;
-                    hit = false;
-                    count = false;
-                    checkcol = false;
-
+                    if (keyActiveUp == true)
+                    {
+                        if (currentMenu > 1)
+                        {
+                            currentMenu = currentMenu - 1;
+                            keyActiveUp = false;
+                        }
+                    }
                 }
-                if (counts < 120)
+                if (keyboard.IsKeyDown(Keys.Down))
                 {
-                    posmonster.X = -100;
+                    if (keyActiveDown == true)
+                    {
+                        if (currentMenu < 4)
+                        {
+                            currentMenu = currentMenu + 1;
+                            keyActiveDown = false;
+                        }
+                    }
                 }
-
-
+                if (keyboard.IsKeyUp(Keys.Up))
+                {
+                    keyActiveUp = true;
+                }
+                if (keyboard.IsKeyUp(Keys.Down))
+                {
+                    keyActiveDown = true;
+                }                if (keyboard.IsKeyDown(Keys.Enter) && currentMenu == 1)
+                {
+                    manu01 = 1;
+                }                if (keyboard.IsKeyDown(Keys.Enter) && currentMenu == 2)
+                {
+                    manu01 = 2;
+                }                if (keyboard.IsKeyDown(Keys.Enter) && currentMenu == 3)
+                {
+                    manu01 = 3;
+                }                if (keyboard.IsKeyDown(Keys.Enter) && currentMenu == 4)
+                {
+                    Exit();
+                }
             }
 
-            if (playercol.Intersects(moncol) == true)
+            if (manu01 == 1)
             {
-
-                hp.DecreaseHp(playercol.Intersects(moncol));
-
-
-            }
-
-            if (lazercol.Intersects(moncol) == true && checkcol == false)
-            {
-
-
-                count = true;
-                old_posmon = posmonster;
-                hits();
-
-
-
-            }
-
-
-
-
-
-            /* else if (lazercol.Intersects(moncol) == false)
-             {
-                 hit = false;
-             }*/
-
-            //posmonster.X -= 3;
-
-            
-            if (jumpplayer == true)
-            {
-                gravity--;
-            }
-
-            posball.Y += speedball.Y;
-            posball.X += speedball.X;
-            if (posball.Y > 400)
-            {
-
-                speedball.Y = -speedball.Y;
-            }
-            if (posball.X > 720)
-            {
-                speedball.X = -speedball.X;
-            }
-            if (posball.Y < 0)
-            {
-                speedball.Y = speedball.Y * -1;
-            }
-            if (posball.X < 0)
-            {
-                speedball.X = speedball.X * -1;
+                playerX.Update(elapsed);
+                player.UpdateFrame(elapsed);
             }
 
             
-            playerX.Update(elapsed);
-            player.UpdateFrame(elapsed);
+
+
             item.Update(elapsed);
             hp.Update(elapsed);
-            monster.Update(elapsed);
+          
             //playerX.Update(elapsed);
 
-            // TODO: Add your update logic here
+            
 
             base.Update(gameTime);
         }
 
+       
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
@@ -255,80 +252,82 @@ namespace project_game_ver0._3
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
-
-            System.Console.WriteLine("bg Pos (x,y ) " + posplayer);
-            
-
-            /*if (posplayer.X < 520)
+            if (manu01 == 0)
             {
-                spriteBatch.Draw(bg, (bgpos - cameraPos) * scroll_factor, Color.White);
+                spriteBatch.Draw(manu, new Vector2(0, 0), Color.White);
+
+                if (currentMenu == 1)
+                {
+                    spriteBatch.Draw(UII01, new Vector2(300, 50), new Rectangle(0, 0, 130, 100), Color.White);
+                }
+                else
+                {
+                    spriteBatch.Draw(UII01, new Vector2(300, 50), new Rectangle(130, 0, 130, 100), Color.White);
+                }
+                if (currentMenu == 2)
+                {
+                    spriteBatch.Draw(UII01, new Vector2(300, 150), new Rectangle(0, 100, 130, 100), Color.White);
+                }
+                else
+                {
+                    spriteBatch.Draw(UII01, new Vector2(300, 150), new Rectangle(130, 100, 130, 100), Color.White);
+                }
+                if (currentMenu == 3)
+                {
+                    spriteBatch.Draw(UII01, new Vector2(300, 250), new Rectangle(0, 200, 130, 100), Color.White);
+                }
+                else
+                {
+                    spriteBatch.Draw(UII01, new Vector2(300, 250), new Rectangle(130, 200, 130, 100), Color.White);
+                }
+                if (currentMenu == 4)
+                {
+                    spriteBatch.Draw(UII01, new Vector2(300, 350), new Rectangle(0, 300, 130, 100), Color.White);
+                }
+                else
+                {
+                    spriteBatch.Draw(UII01, new Vector2(300, 350), new Rectangle(130, 300, 130, 100), Color.White);
+                }
             }
-            spriteBatch.Draw(bg, (bgpos - cameraPos) * scroll_factor + new Vector2(graphics.GraphicsDevice.Viewport.Width, 0), Color.White);
-
-
-            if (posplayer.X > 520)
-            {
-                spriteBatch.Draw(bg, (bgpos - cameraPos) * scroll_factor + new Vector2(graphics.GraphicsDevice.Viewport.Width, 0) * 2, Color.White);
-
-            }*/
-
-            
-            //hp.Draw(spriteBatch);
-
-            //lazer0.Draw(spriteBatch);
 
            
-            spriteBatch.Draw(ball, posball, Color.White);
-
-
-
-
-
             
 
 
-            //player.DrawFrame(spriteBatch, posplayer, direction);
 
-            playerX.Draw(spriteBatch);
 
-            /*if (shootpos == true)
+
+
+
+
+
+
+
+
+
+
+
+
+            if (manu01 == 1)
             {
-                //poslazer = posplayer;
-                poslazer = posplayer + offset;
-
-                shootpos = false;
-
-            }*/
+                playerX.Draw(spriteBatch);
+            }
+               
+           
 
             
-            spriteBatch.DrawString(font, "Col : " + checkcol, new Vector2(200, 200), Color.Black);
             
-            spriteBatch.DrawString(font, "score : " + score, new Vector2(200, 230), Color.Black);
-            spriteBatch.DrawString(font, "count : " + counts, new Vector2(200, 245), Color.Black);
-            spriteBatch.DrawString(font, "check : " + b, new Vector2(200, 330), Color.Black);
+            
+            
+           
 
 
             spriteBatch.End();
             base.Draw(gameTime);
 
         }
-        public void hits()
-        {
-            dropitem = true;
-
-            checkcol = true;
-            item.positem(old_posmon);
-        }
-
-        /*public void fire(bool a)
-        {
-            if (a == true)
-            {
-                lazer0.Draw(spriteBatch);
-                b = a;
-            }
-
-        }*/
+        
+        
         
 
 

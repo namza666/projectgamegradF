@@ -20,7 +20,7 @@ namespace project_game_ver0._3
 
         Game1 game;
 
-        int currentHeart;
+        float currentHeart;
         //Texture2D item;
 
         //GraphicsDeviceManager graphics;
@@ -61,7 +61,7 @@ namespace project_game_ver0._3
 
 
             spriteBatch.Draw(barTexture, new Rectangle(800 / 2 - barTexture.Width / 2, 30, barTexture.Width, 44), new Rectangle(0, 0, barTexture.Width - 4, 59), Color.White);
-            spriteBatch.Draw(barTexture, new Rectangle(800 / 2 - barTexture.Width / 2, 30, currentHeart, 42), new Rectangle(0, 58, barTexture.Width - 10, 60), Color.Red);
+            spriteBatch.Draw(barTexture, new Rectangle(800 / 2 - barTexture.Width / 2, 30, (int)currentHeart, 42), new Rectangle(0, 58, barTexture.Width - 10, 60), Color.Red);
 
 
 
@@ -85,7 +85,7 @@ namespace project_game_ver0._3
             if (c = true) {
                 if (currentHeart > 0 && c == true)
                 {
-                    currentHeart = currentHeart - 3;
+                    currentHeart = currentHeart - 0.3f;
                 }
                 
             }

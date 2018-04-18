@@ -4,23 +4,33 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/a.png</File>
-    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/ball.png</File>
-    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/bg.jpg</File>
-    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/bg2.png</File>
-    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/c.png</File>
-    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/Char01.png</File>
-    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/charector.png</File>
-    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/e.png</File>
-    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/g.png</File>
-    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/h.png</File>
-    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/lazer.png</File>
-    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/bg3.jpg</File>
-    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/bg4.jpg</File>
-    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/item.png</File>
-    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/HealthBar_thumb.png</File>
-    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/File.spritefont</File>
-    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/font.spritefont</File>
-    <File>C:/Users/Windows 10/Desktop/New folder (19)/New folder (4)/New folder/project game ver0.3/project game ver0.3/Content/player.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/a.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/ball.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/bg.jpg</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/bg2.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/c.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/Char01.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/charector.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/e.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/g.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/h.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/lazer.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/bg3.jpg</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/bg4.jpg</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/item.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/HealthBar_thumb.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/File.spritefont</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/font.spritefont</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/player.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/laser.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/enemy.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/platfrom.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/tree.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/tree2.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/bg5.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/coin.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/TDK.jpg</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/UI01.png</File>
+    <File>C:/Users/Windows 10/Documents/Visual Studio 2017/Projects/project game ver0.3/project game ver0.3/Content/sound.mp3</File>
   </SourceFiles>
 </SourceFileCollection>

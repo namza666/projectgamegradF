@@ -36,7 +36,7 @@ namespace project_game_ver0._3
         float foce = 0;
         bool jumpplayer = false;
         int count;
-        spawnmonster monster;
+        
         Hp hp;
         player player;
         public Rectangle lasercol;
